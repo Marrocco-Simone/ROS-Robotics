@@ -2,7 +2,13 @@
 This repo is not finished yet, nor at an acceptable status. We are working on a project for Introduction to Robotics course at University of Trento.
 
 # Start Git
-Create una nuova cartella dove avere dentro due cartelle, una con il vostro cognome e una chiamata **localcopy**
+Create una nuova cartella dove avere dentro due cartelle, una con il vostro cognome e una chiamata **localcopy**  
+Lo schema delle cartelle deve essere così:
+```
+../principale  
+    |-/<cognome>  
+    |-/localcopy
+```
 Usate questi comandi dalla cartella principale per iniziare il git
 ```
 git init
