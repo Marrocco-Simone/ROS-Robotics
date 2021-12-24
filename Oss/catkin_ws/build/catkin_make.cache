@@ -1,0 +1,2 @@
+$/ur_description:$/ur_gazebo:progetto_gazebo:ur5-joint-position-control
+-DCATKIN_DEVEL_PREFIX=/home/tommaso/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/tommaso/catkin_ws/install -G Unix Makefiles

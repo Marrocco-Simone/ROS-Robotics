@@ -1,0 +1,8 @@
+prefix=/home/tommaso/catkin_ws/devel
+
+Name: progetto_gazebo
+Description: Description of progetto_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

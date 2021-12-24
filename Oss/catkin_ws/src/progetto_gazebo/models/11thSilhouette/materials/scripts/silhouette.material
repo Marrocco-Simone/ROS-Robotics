@@ -1,0 +1,14 @@
+material silhouette11Mat/Diffuse
+{
+ receive_shadows off
+ technique
+ {
+  pass
+  {
+   texture_unit
+   {
+    texture silhouette11.png
+   }
+  }
+ }
+}

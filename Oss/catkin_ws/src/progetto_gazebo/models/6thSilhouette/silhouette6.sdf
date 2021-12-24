@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="silhouette6">
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <box>
+           <size>0.3 0.2 0.0001</size>
+          </box>
+        </geometry>
+      </collision>
+      
+      <visual name="visual">
+        <geometry>
+          <box>
+           <size>0.3 0.2 0.0001</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://6thSilhouette/materials/scripts</uri>
+            <uri>model://6thSilhouette/materials/textures</uri>
+            <name>silhouette6Mat/Diffuse</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>
