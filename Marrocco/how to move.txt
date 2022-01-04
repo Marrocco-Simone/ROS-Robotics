@@ -1,0 +1,244 @@
+rostopic pub -1 /elbow_joint_position_controller/command std_msgs/Float64 -- x
+pubblica nel topic di elbow il comando di spostarsi all'angolo x, x che va da -3.14 a 3.14
+
+rosrun mastering_ros_demo_pkg demo_topic_publisher
+avvia cpp che fa in automatico
+
+iscriversi ai seguenti topic
+
+/elbow_joint_position_controller/pid/parameter_descriptions         dynamic_reconfigure/ConfigDescription
+{       
+        groups[]
+        groups[0]: 
+            name: Default
+            type: 
+            parameters[]
+            parameters[0]: 
+                    name: p
+                type: double
+                level: 1
+                description: Proportional gain.
+                edit_method: 
+            parameters[1]: 
+                    name: i
+                type: double
+                level: 1
+                description: Integral gain.
+                edit_method: 
+            parameters[2]: 
+                    name: d
+                type: double
+                level: 1
+                description: Derivative gain.
+                edit_method: 
+            parameters[3]: 
+                    name: i_clamp_min
+                type: double
+                level: 1
+                description: Min bounds for the integral windup
+                edit_method: 
+            parameters[4]: 
+                    name: i_clamp_max
+                type: double
+                level: 1
+                description: Max bounds for the integral windup
+                edit_method: 
+            parameters[5]: 
+                    name: antiwindup
+                type: bool
+                level: 1
+                description: Antiwindup.
+                edit_method: 
+            parent: 0
+            id: 0
+        max: 
+        bools[]
+            bools[0]: 
+                name: antiwindup
+            value: 1
+        ints[]
+        strs[]
+        doubles[]
+            doubles[0]: 
+                name: p
+            value: 100000
+            doubles[1]: 
+                name: i
+            value: 1000
+            doubles[2]: 
+                name: d
+            value: 1000
+            doubles[3]: 
+                name: i_clamp_min
+            value: 0
+            doubles[4]: 
+                name: i_clamp_max
+            value: 1000
+        groups[]
+            groups[0]: 
+                name: Default
+            state: 1
+            id: 0
+            parent: 0
+        min: 
+        bools[]
+            bools[0]: 
+                name: antiwindup
+            value: 0
+        ints[]
+        strs[]
+        doubles[]
+            doubles[0]: 
+                name: p
+            value: -100000
+            doubles[1]: 
+                name: i
+            value: -1000
+            doubles[2]: 
+                name: d
+            value: -1000
+            doubles[3]: 
+                name: i_clamp_min
+            value: -1000
+            doubles[4]: 
+                name: i_clamp_max
+            value: 0
+        groups[]
+            groups[0]: 
+                name: Default
+            state: 1
+            id: 0
+            parent: 0
+        dflt: 
+        bools[]
+            bools[0]: 
+                name: antiwindup
+            value: 0
+        ints[]
+        strs[]
+        doubles[]
+            doubles[0]: 
+                name: p
+            value: 10
+            doubles[1]: 
+                name: i
+            value: 0.1
+            doubles[2]: 
+                name: d
+            value: 1
+            doubles[3]: 
+                name: i_clamp_min
+            value: -10
+            doubles[4]: 
+                name: i_clamp_max
+            value: 10
+        groups[]
+            groups[0]: 
+                name: Default
+            state: 1
+            id: 0
+            parent: 0
+}
+/elbow_joint_position_controller/pid/parameter_updates              dynamic_reconfigure/Config
+{       
+        bools[]
+        bools[0]: 
+            name: antiwindup
+            value: 0
+        ints[]
+        strs[]
+        doubles[]
+        doubles[0]: 
+            name: p
+            value: 10000
+        doubles[1]: 
+            name: i
+            value: 0.01
+        doubles[2]: 
+            name: d
+            value: 50
+        doubles[3]: 
+            name: i_clamp_min
+            value: -100
+        doubles[4]: 
+            name: i_clamp_max
+            value: 100
+        groups[]
+        groups[0]: 
+            name: Default
+            state: 1
+            id: 0
+            parent: 0
+}
+/elbow_joint_position_controller/state                              control_msgs/JointControllerState
+{
+        header: 
+        seq: 542505
+        stamp: 5430.516000000
+        frame_id: 
+        set_point: 1.6      ###this is the current angle of the joint
+        process_value: 1.60149
+        process_value_dot: 0.000638316
+        error: -0.00148682
+        time_step: 0.001
+        command: -15.6047
+        p: 10000
+        i: 0.01
+        d: 50
+        i_clamp: 100
+        antiwindup: 0
+}
+    current angle: msg->set_point
+
+
+
+
+/shoulder_pan_joint_position_controller
+/shoulder_lift_joint_position_controller
+/elbow_joint_position_controller
+/wrist_1_joint_position_controller
+/wrist_2_joint_position_controller
+/wrist_3_joint_position_controller
+
+
+all topics
+{    
+    /clock
+    /elbow_joint_position_controller/command
+    /elbow_joint_position_controller/pid/parameter_descriptions
+    /elbow_joint_position_controller/pid/parameter_updates
+    /elbow_joint_position_controller/state
+    /gazebo/link_states
+    /gazebo/model_states
+    /gazebo/parameter_descriptions
+    /gazebo/parameter_updates
+    /gazebo/performance_metrics
+    /gazebo/set_link_state
+    /gazebo/set_model_state
+    /joint_states
+    /rosout
+    /rosout_agg
+    /shoulder_lift_joint_position_controller/command
+    /shoulder_lift_joint_position_controller/pid/parameter_descriptions
+    /shoulder_lift_joint_position_controller/pid/parameter_updates
+    /shoulder_lift_joint_position_controller/state
+    /shoulder_pan_joint_position_controller/command
+    /shoulder_pan_joint_position_controller/pid/parameter_descriptions
+    /shoulder_pan_joint_position_controller/pid/parameter_updates
+    /shoulder_pan_joint_position_controller/state
+    /tf
+    /tf_static
+    /ur5/joint_states
+    /wrist_1_joint_position_controller/command
+    /wrist_1_joint_position_controller/pid/parameter_descriptions
+    /wrist_1_joint_position_controller/pid/parameter_updates
+    /wrist_1_joint_position_controller/state
+    /wrist_2_joint_position_controller/command
+    /wrist_2_joint_position_controller/pid/parameter_descriptions
+    /wrist_2_joint_position_controller/pid/parameter_updates
+    /wrist_2_joint_position_controller/state
+    /wrist_3_joint_position_controller/command
+    /wrist_3_joint_position_controller/pid/parameter_descriptions
+    /wrist_3_joint_position_controller/pid/parameter_updates
+    /wrist_3_joint_position_controller/state
+}
